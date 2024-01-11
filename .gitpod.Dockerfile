@@ -5,8 +5,8 @@ RUN rustup toolchain install 1.69.0
 RUN rustup default 1.69.0
 RUN rustup target add wasm32-unknown-unknown
 RUN rustup default 1.74.1
-RUN cargo install cosmwasm-check
-RUN cargo install cargo-generate
+RUN cargo install cosmwasm-check@1.5.0
+RUN cargo install cargo-generate@0.19.0
 RUN rustup default 1.69.0
 
 USER root
