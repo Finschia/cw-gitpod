@@ -1,0 +1,32 @@
+image: finschia/cw-gitpod:latest
+
+checkoutLocation: "cw-gitpod"
+workspaceLocation: "./cw-gitpod/cosmwasm"
+
+vscode:
+  extensions:
+    - rust-lang.rust-analyzer
+    - Spoorthi.cosmy-wasmy
+    - tamasfe.even-better-toml
+
+tasks:
+  - name: Setup
+
+    init: |
+      ##
+      # clone tutorials
+      cd ..
+      git clone https://github.com/Finschia/tutorials.git
+      cd cosmwasm
+
+      ##
+      # generate workspace.
+      cargo generate --git https://github.com/Finschia/cw-workspace.git --name tutorial --init -o
+
+    command: |
+      ##
+      #
+
+      cd ../tutorials/localnet/single
+      docker-compose up -d finschia faucet
+      cd ../../../cosmwasm
