@@ -1,4 +1,4 @@
-image: finschia/cw-gitpod:latest
+image: finschia/cw-gitpod:1.0.0
 
 checkoutLocation: "cw-gitpod"
 workspaceLocation: "./cw-gitpod/cosmwasm"
