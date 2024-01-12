@@ -29,3 +29,7 @@ tasks:
       cd ../tutorials/localnet/single
       docker-compose up -d finschia faucet
       cd ../../../cosmwasm
+
+      ##
+      # clear
+      clear
