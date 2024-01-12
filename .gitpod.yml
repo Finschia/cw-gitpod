@@ -14,6 +14,11 @@ tasks:
 
     init: |
       ##
+      # close sync
+      gp sync-done settings-sync-off
+      gp sync-await settings-sync-off
+
+      ##
       # clone tutorials
       cd ..
       git clone https://github.com/Finschia/tutorials.git
